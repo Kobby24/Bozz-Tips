@@ -274,15 +274,15 @@ export default function Navbar() {
                   </span>
                 </button>
               )} */}
-              <Link href="/" className="block px-3 py-2 text-gray-600 hover:text-blue-900">Home</Link>
-              <Link href="/predictions" className="block px-3 py-2 text-gray-600 hover:text-blue-900">Predictions</Link>
-              <Link href="/about" className="block px-3 py-2 text-gray-600 hover:text-blue-900">About</Link>
+              <Link href="/" className="block px-3 py-2 text-gray-600 hover:text-blue-900" onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link href="/predictions" className="block px-3 py-2 text-gray-600 hover:text-blue-900" onClick={() => setIsMenuOpen(false)}>Predictions</Link>
+              <Link href="/about" className="block px-3 py-2 text-gray-600 hover:text-blue-900" onClick={() => setIsMenuOpen(false)}>About</Link>
               {auth ? (
                 <>
-                  <Link href="/dashboard" className="block px-3 py-2 text-gray-600 hover:text-blue-900">Dashboard</Link>
-                  <Link href="/settings" className="block px-3 py-2 text-gray-600 hover:text-blue-900">Settings</Link>
+                  <Link href="/dashboard" className="block px-3 py-2 text-gray-600 hover:text-blue-900" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
+                  <Link href="/settings" className="block px-3 py-2 text-gray-600 hover:text-blue-900" onClick={() => setIsMenuOpen(false)} >Settings</Link>
                   <button
-                    onClick={handleSignOut}
+                    onClick={() => { handleSignOut(); setIsMenuOpen(false); }}
                     className="block w-full text-left px-3 py-2 text-gray-600 hover:text-blue-900"
                   >
                     Sign out
@@ -290,7 +290,7 @@ export default function Navbar() {
                 </>
               ) : (
                 <Link
-                  href="/login"
+                  href="/login" onClick={() => setIsMenuOpen(false)}
                   className="block px-3 py-2 bg-blue-900 text-white rounded-full text-center hover:bg-blue-800 transition-colors"
                 >
                   Sign In

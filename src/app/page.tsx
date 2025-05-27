@@ -126,29 +126,32 @@ const Home: React.FC = () => {
               </button>
               {showDatePicker && (
                 <>
-                  {/* Overlay to close popover when clicking outside */}
+                  {/* Overlay */}
                   <div
-                    className="fixed inset-0 z-50 bg-transparent"
+                    className="fixed inset-0 z-50 bg-black/40"
                     onClick={() => setShowDatePicker(false)}
                   />
-                  <div className="absolute z-50 mt-2 left-1/2 -translate-x-1/2 w-[90vw] max-w-xs sm:w-auto sm:max-w-none bg-white border border-blue-200 rounded-lg shadow-lg p-4">
-                    <DatePicker
-                      selected={calendarDate}
-                      onChange={(date: Date | null) => {
-                        setCalendarDate(date);
-                        setShowDatePicker(false);
-                        if (date) {
-                          const formatted = date.toISOString().split('T')[0];
-                          setSelectedDate(formatted);
-                          setSelectedDay('other');
-                        }
-                      }}
-                      maxDate={new Date()}
-                      inline
-                      showMonthDropdown
-                      showYearDropdown
-                      dropdownMode="select"
-                    />
+                  {/* Centered Modal */}
+                  <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+                    <div className="bg-white border border-blue-200 rounded-lg shadow-lg p-4 w-[95vw] max-w-xs sm:w-auto sm:max-w-none pointer-events-auto">
+                      <DatePicker
+                        selected={calendarDate}
+                        onChange={(date: Date | null) => {
+                          setCalendarDate(date);
+                          setShowDatePicker(false);
+                          if (date) {
+                            const formatted = date.toISOString().split('T')[0];
+                            setSelectedDate(formatted);
+                            setSelectedDay('other');
+                          }
+                        }}
+                        maxDate={new Date()}
+                        inline
+                        showMonthDropdown
+                        showYearDropdown
+                        dropdownMode="select"
+                      />
+                    </div>
                   </div>
                 </>
               )}

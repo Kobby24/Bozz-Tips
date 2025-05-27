@@ -128,10 +128,10 @@ const Home: React.FC = () => {
                 <>
                   {/* Overlay to close popover when clicking outside */}
                   <div
-                    className="fixed inset-0 z-40 bg-transparent"
+                    className="fixed inset-0 z-50 bg-transparent"
                     onClick={() => setShowDatePicker(false)}
                   />
-                  <div className="absolute z-50 mt-2 left-1/2 -translate-x-1/2 bg-white border border-blue-200 rounded-lg shadow-lg p-4">
+                  <div className="absolute z-50 mt-2 left-1/2 -translate-x-1/2 w-[90vw] max-w-xs sm:w-auto sm:max-w-none bg-white border border-blue-200 rounded-lg shadow-lg p-4">
                     <DatePicker
                       selected={calendarDate}
                       onChange={(date: Date | null) => {

@@ -71,7 +71,7 @@ const Home: React.FC = () => {
           {/* The logo is part of the background image, so nothing else here */}
         </div>
         <div className="absolute bottom-2 sm:bottom-10 left-1/2 transform -translate-x-1/2 w-full max-w-xs sm:max-w-2xl px-3 flex flex-col items-center text-white text-center z-30 bg-transparent py-6 mt-8 sm:py-6 sm:mt-8">
-          <div className="flex flex-row justify-center gap-4 w-full">
+          <div className="flex flex-wrap justify-center items-center gap-4 gap-y-2">
             <Link
               href="#"
               onClick={(e) => {
@@ -82,7 +82,7 @@ const Home: React.FC = () => {
                   window.location.href = '/vvip';
                 }
               }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-full font-bold transition-colors min-w-[140px] text-center"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 sm:px-4 sm:py-3 rounded-full font-bold transition-colors min-w-[100px] sm:min-w-[140px] text-center text-sm sm:text-base"
             >
               JOIN VVIP
             </Link>
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
               href="https://t.me/wassce_bece_2024"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-blue-900 px-4 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors min-w-[140px] text-center"
+              className="bg-white text-blue-900 px-3 py-2 sm:px-4 sm:py-3 rounded-full font-bold hover:bg-gray-100 transition-colors min-w-[100px] sm:min-w-[140px] text-center text-sm sm:text-base"
             >
               Join Telegram Channel
             </Link>

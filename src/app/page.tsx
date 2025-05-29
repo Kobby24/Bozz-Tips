@@ -8,6 +8,7 @@ import { useSession } from 'next-auth/react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FaRegCalendarAlt } from 'react-icons/fa';
+import AnimatedCounter from '../components/Animatedcounter';
 
 type Game = {
   game_id: number;
@@ -218,20 +219,20 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">Why Us?</h2>
           <p className="text-center text-blue-900 max-w-2xl mx-auto mb-16">
-            We have 90% win ratio so far, our games are well organized and taken from the best sources. 
+            We have <AnimatedCounter target={90} duration={5000} />% win ratio so far, our games are well organized and taken from the best sources. 
             We value our clients first, and we've managed to satisfy every single customer.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-4xl font-bold text-blue-600 mb-2">10,000+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2"><AnimatedCounter target={10000} duration={5000} />+</div>
               <div className="text-gray-600">Subscribers</div>
             </div>
             <div className="text-center p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-4xl font-bold text-blue-600 mb-2">90%</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2"><AnimatedCounter target={90} duration={5000} />%</div>
               <div className="text-gray-600">Win Ratio</div>
             </div>
             <div className="text-center p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-4xl font-bold text-blue-600 mb-2">6,500+</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2"><AnimatedCounter target={6500} duration={5000} />+</div>
               <div className="text-gray-600">Predictions</div>
             </div>
           </div>
@@ -252,7 +253,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center min-h-[350px] py-12 sm:py-0">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 sm:mb-8">Join Us Now</h2>
           <p className="text-base sm:text-xl mb-6 sm:mb-8 max-w-xs sm:max-w-2xl mx-auto text-blue-100">
-            Join over 10,000 people who win every single day. Our games are categorized for every aspect including free daily games. Don't miss out on this chance of winning big.
+            Join over <AnimatedCounter target={10000} duration={5000} />+ people who win every single day. Our games are categorized for every aspect including free daily games. Don't miss out on this chance of winning big.
           </p>
           <Link
             href="#"

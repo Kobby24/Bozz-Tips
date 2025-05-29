@@ -219,7 +219,7 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">Why Us?</h2>
           <p className="text-center text-blue-900 max-w-2xl mx-auto mb-16">
-            We have <AnimatedCounter target={90} duration={5000} />% win ratio so far, our games are well organized and taken from the best sources. 
+            We have <AnimatedCounter target={96} duration={5000} />% win ratio so far, our games are well organized and taken from the best sources. 
             We value our clients first, and we've managed to satisfy every single customer.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -228,7 +228,7 @@ const Home: React.FC = () => {
               <div className="text-gray-600">Subscribers</div>
             </div>
             <div className="text-center p-6 bg-white rounded-lg shadow-sm">
-              <div className="text-4xl font-bold text-blue-600 mb-2"><AnimatedCounter target={90} duration={5000} />%</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2"><AnimatedCounter target={96} duration={5000} />%</div>
               <div className="text-gray-600">Win Ratio</div>
             </div>
             <div className="text-center p-6 bg-white rounded-lg shadow-sm">
